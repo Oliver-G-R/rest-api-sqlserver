@@ -1,0 +1,30 @@
+
+### GET LINKS
+GET http://localhost:3000/links 
+
+### GET LINKS BY ID
+POST http://localhost:3000/links
+Content-Type: application/json
+
+{
+  "url": "http://www.google.com",
+  "title": "Google"
+}
+
+### GET LINKS BY ID
+GET http://localhost:3000/links/:id
+
+
+### DELETE LINKS BY ID
+DELETE http://localhost:3000/links/:id
+
+
+### UPDATE LINKS BY ID
+PUT http://localhost:3000/links/:id
+Content-Type: application/json
+
+{
+  "url": "http://www.google.com",
+  "title": "Google"
+}
+
