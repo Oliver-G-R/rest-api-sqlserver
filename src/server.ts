@@ -11,6 +11,9 @@ app.set('PORT', config.PORT)
 app.use(morgan('dev'))
 app.use(cors({ exposedHeaders: 'Authorization' }))
 
+app.use(express.json())
+app.use(express.urlencoded({extended: false}))
+
 app.use('/links', linksRouter)
 
 export default app

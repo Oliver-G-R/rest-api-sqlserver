@@ -1,30 +1,30 @@
+@API_URL_LINKS =  http://localhost:3000/links
 
 ### GET LINKS
-GET http://localhost:3000/links 
+GET {{API_URL_LINKS}} 
 
 ### GET LINKS BY ID
-POST http://localhost:3000/links
+GET {{API_URL_LINKS}}/7
+
+### POST LINKS
+POST {{API_URL_LINKS}}
 Content-Type: application/json
 
 {
-  "url": "http://www.google.com",
-  "title": "Google"
+  "linkName": "Las mejores apps para pasar el tiempo",
+  "description": "",
+  "link": "https://www.youtube.com/watch?v=d1w429W3XcQ"
 }
-
-### GET LINKS BY ID
-GET http://localhost:3000/links/:id
-
 
 ### DELETE LINKS BY ID
-DELETE http://localhost:3000/links/:id
-
+DELETE {{API_URL_LINKS}}/8
 
 ### UPDATE LINKS BY ID
-PUT http://localhost:3000/links/:id
+PUT {{API_URL_LINKS}}/8
 Content-Type: application/json
 
 {
-  "url": "http://www.google.com",
-  "title": "Google"
+  "linkName": "NestJs vs NodeJs",
+  "description": "Una comparativa entre estas dos herrameintas backend",
+  "link": "https://www.youtube.com/watch?v=dqw429WgXcQ"
 }
-
